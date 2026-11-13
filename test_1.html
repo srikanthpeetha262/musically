@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Music Hub</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #101010;
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    padding: 25px;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 32px;
+    margin-top: 40px;
+}
+
+.subtitle {
+    color: #aaa;
+    margin: 12px 0 35px;
+}
+
+.music-card {
+    background: #202020;
+    padding: 22px;
+    border-radius: 16px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    transition: 0.2s;
+}
+
+.music-card:hover {
+    background: #303030;
+}
+
+.icon {
+    font-size: 35px;
+}
+
+.info {
+    flex: 1;
+}
+
+.info h3 {
+    margin-bottom: 6px;
+}
+
+.info p {
+    color: #aaa;
+    font-size: 13px;
+}
+
+button {
+    background: #1db954;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.footer {
+    text-align: center;
+    color: #777;
+    margin-top: 45px;
+    font-size: 12px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎵 Music Hub</h1>
+
+    <p class="subtitle">
+        Your music. Your choice.
+    </p>
+
+    <div class="music-card">
+        <div class="icon">▶️</div>
+
+        <div class="info">
+            <h3>YouTube Music</h3>
+            <p>Listen to your favourite songs</p>
+        </div>
+
+        <button onclick="openMusic('https://music.youtube.com/')">
+            OPEN
+        </button>
+    </div>
+
+    <div class="music-card">
+        <div class="icon">🟢</div>
+
+        <div class="info">
+            <h3>Spotify</h3>
+            <p>Music and playlists</p>
+        </div>
+
+        <button onclick="openMusic('https://open.spotify.com/')">
+            OPEN
+        </button>
+    </div>
+
+    <div class="music-card">
+        <div class="icon">☁️</div>
+
+        <div class="info">
+            <h3>SoundCloud</h3>
+            <p>Discover new music</p>
+        </div>
+
+        <button onclick="openMusic('https://soundcloud.com/')">
+            OPEN
+        </button>
+    </div>
+
+    <div class="music-card">
+        <div class="icon">📺</div>
+
+        <div class="info">
+            <h3>YouTube</h3>
+            <p>Music videos and more</p>
+        </div>
+
+        <button onclick="openMusic('https://www.youtube.com/')">
+            OPEN
+        </button>
+    </div>
+
+    <div class="footer">
+        MUSIC HUB • MADE FOR ANDROID
+    </div>
+
+</div>
+
+<script>
+
+function openMusic(url) {
+    window.open(url, "_blank");
+}
+
+</script>
+
+</body>
+</html>
